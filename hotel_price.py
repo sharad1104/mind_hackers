@@ -14,7 +14,7 @@ from sklearn.pipeline import Pipeline
 
 #Preparing the data for categorical analysis
 
-data = pd.read_csv('DATA_for_relationship_dnn.csv')
+data = pd.read_csv('data.csv')
 train_y = data.COST_PER_DAY
 
 train_x = data[['AVG_DIST','STAR_RATING','pos_value']]
