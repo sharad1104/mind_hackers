@@ -57,35 +57,18 @@ model = Sequential([
   Dense(64, activation='relu'),
   Dense(6, activation='softmax'),
 ])
-# # #
-# # # Compile the model.
+# Compile the model.
 model.compile(
   optimizer='adam',
   loss='categorical_crossentropy',
   metrics=['accuracy'],
 )
-# # #
-# # # # Train the model.
+# Train the model.
 model.fit(
   input_one_hot_encoded,
   output_one_hot_encoded,
   epochs=500,
 )
 
-
-
-# # Evaluate the model.
-# model.evaluate(
-#   test_images,
-#   to_categorical(test_labels)
-# )
-#
-# Save the model to disk.
 model.save_weights('model.h5')
 
-# # Load the model from disk later using:
-# # model.load_weights('model.h5')
-#
-# # Predict on the first 5 test images.
-print(final_data[7])
-print(output_one_hot_encoded[7])
